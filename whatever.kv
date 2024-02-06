@@ -1,0 +1,55 @@
+<MyGridLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        
+        VideoPlayer:
+            id: video
+            source: "C:/Users/James/Downloads/36bd3baac23f45589805cf2274ce6535.mp4"
+            state: 'pause'
+            eos: 'pause'
+        
+        Label:
+            id: script1
+            #text: "Line 1"
+            font_size: 25
+            size_hint: (1, 0.1)
+        
+        Label:
+            id: script2
+            #text: "Line 2"
+            font_size: 25
+            size_hint: (1, 0.1)
+
+        Label:
+            id: script3
+            #text: "Line 3"
+            font_size: 25
+            size_hint: (1, 0.1)
+
+        Label:
+            id: script4
+            #text: "Line 4"
+            font_size: 25
+            size_hint: (1, 0.1)
+        
+        Label:
+            id: script5
+            #text: "Line 5"
+            font_size: 25
+            size_hint: (1, 0.1)
+            
+
+        TextInput:
+            id: name_input
+            multiline: False
+            size_hint: (1, 0.1)
+        
+        Button:
+            id: enter
+            size_hint: (1, 0.1)
+            font_size: 25
+            text: "Enter"
+            on_press: root.press()
+            background_color: (42/255.0,237/255.0, 26/255.0,1)
