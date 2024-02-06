@@ -13,13 +13,12 @@ import textwrap
 
 
 def AI(user_input):
-    video_apikey = 'MzZkYTE0MGUwNmIwNGEwMGE5ZWUxOTlhMmY1ODIwNmQtMTcwNzE4MTMwOA=='
+    video_apikey = <__APIKEY__>
     client = OpenAI(
-        api_key= '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'
+        api_key= <__APIKEY__>
     )
 
     user_input = user_input
-    #input("prompt (-1 to quit)")
 
     chat_completion = client.chat.completions.create(
         messages=[
@@ -131,10 +130,9 @@ class MyGridLayout(Widget):
 
         self.ids.name_input.text = ""
 
-        #valid_vid = ["6dbc5a63bfba42f2bec552cc73dc4581",'Singapore: Vibrant city-state in Southeast Asia. Boasts modern skyline, diverse culture, efficient transport, and strict governance.']
         valid_vid = AI(name)
         if(valid_vid != None):
-            self.ids.video.source = 'C:/Users/James/Downloads/'+ valid_vid[0] + '.mp4'
+            self.ids.video.source = <Dir>'+ valid_vid[0] + '.mp4'
             script = textwrap.wrap(valid_vid[1],70)
             script_size = len(script)
 
